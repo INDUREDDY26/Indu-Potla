@@ -16,7 +16,7 @@ export default function Hero() {
   }, [textOptions.length]);
 
   return (
-    <section className="flex flex-col items-center justify-center text-center h-screen px-6 w-full bg-white">
+    <section className="flex flex-col items-center justify-center text-center h-screen px-6 w-full bg-white pt-24">
       {/* Name & Title */}
       <h1 className="text-6xl md:text-7xl font-bold text-gray-900 leading-tight">
         Hi, I&apos;m <span className="text-gray-700">Indu</span>
@@ -40,20 +40,20 @@ export default function Hero() {
       </p>
 
       {/* Social Links */}
-              <div className="mt-6 flex justify-center space-x-6">
-                  <a href="https://www.linkedin.com/in/indu-potla/" target="_blank" rel="noopener noreferrer"
-                      className="bg-[#171717] p-3 rounded-full text-white hover:bg-gray-800 transition">
-                      <FaLinkedin className="text-3xl" />
-                  </a>
-                  <a href="https://github.com/INDUREDDY26" target="_blank" rel="noopener noreferrer"
-                      className="bg-[#171717] p-3 rounded-full text-white hover:bg-gray-800 transition">
-                      <FaGithub className="text-3xl" />
-                  </a>
-                  <a href="mailto:indupotla26@gmail.com"
-                      className="bg-[#171717] p-3 rounded-full text-white hover:bg-gray-800 transition">
-                      <FaEnvelope className="text-3xl" />
-                  </a>
-              </div>
+      <div className="mt-6 flex justify-center space-x-6">
+        <a href="https://www.linkedin.com/in/indu-potla/" target="_blank" rel="noopener noreferrer"
+          className="bg-[#171717] p-3 rounded-full text-white hover:bg-gray-800 transition">
+          <FaLinkedin className="text-3xl" />
+        </a>
+        <a href="https://github.com/INDUREDDY26" target="_blank" rel="noopener noreferrer"
+          className="bg-[#171717] p-3 rounded-full text-white hover:bg-gray-800 transition">
+          <FaGithub className="text-3xl" />
+        </a>
+        <a href="mailto:indupotla26@gmail.com"
+          className="bg-[#171717] p-3 rounded-full text-white hover:bg-gray-800 transition">
+          <FaEnvelope className="text-3xl" />
+        </a>
+      </div>
 
       {/* Buttons */}
       <div className="mt-6 flex space-x-4">
