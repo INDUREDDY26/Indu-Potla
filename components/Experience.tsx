@@ -1,6 +1,7 @@
 "use client";
 
 import { FaBriefcase } from "react-icons/fa";
+import Image from "next/image";
 
 const experiences = [
   {
@@ -53,7 +54,7 @@ export default function Experience() {
         {experiences.map((exp, index) => (
           <div key={index} className="flex items-start gap-4 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
             {/* Company Logo */}
-            <img src={exp.logo} alt={`${exp.company} Logo`} className="w-14 h-14 object-contain" />
+            <Image src={exp.logo} alt={`${exp.company} Logo`} width={500} height={300} />
             {/* Experience Details */}
             <div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{exp.role}</h3>

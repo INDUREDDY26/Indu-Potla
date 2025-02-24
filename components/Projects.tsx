@@ -1,6 +1,6 @@
 "use client";
 
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
   {

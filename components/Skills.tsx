@@ -3,8 +3,7 @@
 import {
   FaReact,
   FaNodeJs,
-  FaDatabase,
-  FaCloud,
+  
   FaTools,
   FaJava,
   FaGitAlt,

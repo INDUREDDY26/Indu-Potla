@@ -1,7 +1,8 @@
 "use client"; // Required for client-side rendering
 
-import { FaGraduationCap, FaCode } from "react-icons/fa";
-import { SiJavascript, SiPython, SiReact, SiNodedotjs, SiMongodb, SiTailwindcss, SiGooglemaps } from "react-icons/si";
+import { FaGraduationCap } from "react-icons/fa";
+import Image from "next/image";
+//import { SiJavascript, SiPython, SiReact, SiNodedotjs, SiMongodb, SiTailwindcss, SiGooglemaps } from "react-icons/si";
 
 export default function About() {
   return (
@@ -23,10 +24,10 @@ clean, reusable code and developing user-friendly tools that enhance functionali
 
         {/* University of Florida */}
         <div className="mt-4 flex items-center gap-4 bg-gray-200 dark:bg-gray-800 p-4 rounded-lg shadow-md">
-          <img
+          <Image
             src="/uf-logo.png"
             alt="University of Florida Logo"
-            className="w-12 h-12 rounded-full"
+            width={500} height={300}
           />
           <div>
             <h4 className="text-xl font-semibold text-gray-900 dark:text-white">
@@ -42,10 +43,10 @@ clean, reusable code and developing user-friendly tools that enhance functionali
         </div>
         {/* Jawaharlal Nehru Technological University */}
         <div className="mt-4 flex items-center gap-4 bg-gray-200 dark:bg-gray-800 p-4 rounded-lg shadow-md">
-          <img
+          <Image
             src="/jntuh-logo.png"
             alt="JNTU Logo"
-            className="w-12 h-12 rounded-full"
+            width={500} height={300}
           />
           <div>
             <h4 className="text-xl font-semibold text-gray-900 dark:text-white">

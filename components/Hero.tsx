@@ -13,13 +13,13 @@ export default function Hero() {
       setTextIndex((prevIndex) => (prevIndex + 1) % textOptions.length);
     }, 2000);
     return () => clearInterval(interval);
-  }, []);
+  }, [textOptions.length]);
 
   return (
     <section className="flex flex-col items-center justify-center text-center h-screen px-6 w-full bg-white">
       {/* Name & Title */}
       <h1 className="text-6xl md:text-7xl font-bold text-gray-900 leading-tight">
-        Hi, I'm <span className="text-gray-700">Indu</span>
+        Hi, I&apos;m <span className="text-gray-700">Indu</span>
       </h1>
 
       <motion.p
