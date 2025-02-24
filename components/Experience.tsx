@@ -7,7 +7,7 @@ const experiences = [
     role: "Software Engineer",
     company: "Cognizant Technology Solutions",
     location: "Hyderabad, India",
-    logo: "/cognizant-logo.png", // Add this image inside the `public/` folder
+    logo: "/cognizant-logo.png",
     duration: "June 2022 – May 2023",
     responsibilities: [
       "Improved a client’s website with Angular and React, enhancing navigation and checkout flow, increasing user retention by 15%.",
@@ -18,7 +18,7 @@ const experiences = [
     role: "Software Engineer Intern",
     company: "Cognizant Technology Solutions",
     location: "Hyderabad, India",
-    logo: "/cognizant-logo.png", // Add this image inside the `public/` folder
+    logo: "/cognizant-logo.png",
     duration: "January 2022 – May 2022",
     responsibilities: [
       "Developed a Mail Order Pharmacy portal using Java, Spring Boot, and Microservices, improving order processing efficiency by 25%.",
@@ -30,7 +30,7 @@ const experiences = [
     role: "Student Research Assistant",
     company: "Vardhaman College of Engineering",
     location: "Hyderabad, India",
-    logo: "/vardhaman-logo.png", // Add this image inside the `public/` folder
+    logo: "/vardhaman-logo.png",
     duration: "June 2021 – December 2021",
     responsibilities: [
       "Automated data processing workflows using Python scripts and machine learning models, improving data analysis efficiency by 40%.",
@@ -41,26 +41,41 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="h-screen flex flex-col justify-center px-8 md:px-20 lg:px-32 w-full bg-gray-100 dark:bg-gray-900">
+    <section
+      id="experience"
+      className="relative z-10 py-20 px-6 sm:px-10 md:px-20 lg:px-32 w-full bg-gray-100 dark:bg-gray-900"
+    >
+      {/* Title */}
       <h2 className="text-4xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
-        <FaBriefcase className="text-black-500" /> Work Experience
+        <FaBriefcase className="text-gray-700 dark:text-gray-300" /> Work Experience
       </h2>
       <p className="text-lg text-gray-700 dark:text-gray-300 mt-2">
         My professional journey in software engineering.
       </p>
 
-      <div className="mt-8 space-y-8">
+      {/* Experience Cards */}
+      <div className="mt-12 space-y-10">
         {experiences.map((exp, index) => (
-          <div key={index} className="flex items-start gap-4 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+          <div
+            key={index}
+            className="flex flex-col md:flex-row items-start gap-6 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg"
+          >
             {/* Company Logo */}
-            <img src={exp.logo} alt={`${exp.company} Logo`} className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg shadow-lg" />
+            <img
+              src={exp.logo}
+              alt={`${exp.company} Logo`}
+              className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg shadow-md"
+            />
+            
             {/* Experience Details */}
             <div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{exp.role}</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
+                {exp.role}
+              </h3>
               <p className="text-gray-700 dark:text-gray-300">
                 {exp.company} • {exp.location} • {exp.duration}
               </p>
-              <ul className="mt-2 list-disc pl-5 text-gray-600 dark:text-gray-400">
+              <ul className="mt-3 list-disc pl-5 text-gray-600 dark:text-gray-400">
                 {exp.responsibilities.map((task, i) => (
                   <li key={i}>{task}</li>
                 ))}

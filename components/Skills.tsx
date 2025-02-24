@@ -27,7 +27,7 @@ import {
 
 export default function Skills() {
   return (
-    <section id="skills" className="flex flex-col justify-center px-8 md:px-20 lg:px-32 w-full">
+    <section id="skills" className="flex flex-col justify-center px-8 md:px-20  lg:px-32 w-full">
       <h2 className="text-4xl font-bold text-gray-900 dark:text-white">Skills</h2>
       <p className="text-lg text-gray-700 dark:text-gray-300 mt-2">
         Technologies I’ve worked with:

@@ -28,22 +28,21 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="h-screen flex flex-col justify-center px-8 md:px-20 lg:px-32 w-full">
+    <section id="projects" className="relative z-10 py-20 px-6 sm:px-10 md:px-20 lg:px-32 w-full bg-gray-100 dark:bg-gray-900">
+      {/* Section Title */}
       <h2 className="text-4xl font-bold text-gray-900 dark:text-white">Projects</h2>
-      {/*<p className="text-lg text-gray-700 dark:text-gray-300 mt-2">
-        Hover over a project to see details.
-      </p>*/}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="relative border border-gray-700 p-8 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl bg-[#171717] text-white"
+            className="border border-gray-300 dark:border-gray-700 p-6 rounded-lg shadow-lg bg-white dark:bg-[#171717] text-gray-900 dark:text-white transition-all"
           >
-        
-            <h3 className="text-3xl font-semibold text-white">{project.title}</h3>
-            <p className="text-gray-400 text-lg mt-2">{project.description}</p>
+            {/* Project Title */}
+            <h3 className="text-2xl font-semibold">{project.title}</h3>
+            <p className="text-gray-600 dark:text-gray-400 text-lg mt-2">{project.description}</p>
 
+            {/* Tech Stack Badges */}
             <div className="mt-4 flex flex-wrap gap-2">
               {project.tech.map((tech, i) => (
                 <span key={i} className="px-3 py-1 bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white rounded-full text-sm">
@@ -52,9 +51,8 @@ export default function Projects() {
               ))}
             </div>
 
-            {/* Buttons stay visible and clickable */}
-            <div className="mt-6 flex justify-center space-x-4">
-              {/* Commented out GitHub button */}
+            {/* Buttons - Keep GitHub button commented for now */}
+            <div className="mt-6 flex justify-start space-x-4">
               {/* 
               <a
                 href={project.github}
