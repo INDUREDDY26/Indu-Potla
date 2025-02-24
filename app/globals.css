@@ -3,19 +3,107 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8f9fa; /* Soft light gray */
+  --foreground: #171717; /* Dark text */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #e6e6e6; /* Slightly darker light mode */
+    --foreground: #0a0a0a; /* Dark mode text */
   }
 }
 
 body {
+  font-family: "Inter", sans-serif; /* Clean & Modern Font */
+  background-color: var(--background);
+  background: none !important; 
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Ensure headings are NOT too bold */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500 !important; /* Make headings lighter */
+}
+
+/* Make paragraph text even thinner */
+p, span, li {
+  font-weight: 300; /* Light font weight */
+  color: #333; /* Keep good readability */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+section {
+  padding: 100px 0;
+  transition: background-color 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Full-width light sections */
+#hero {
+  background-color: #ffffff; /* White background */
+  color: #171717;
+}
+
+#about {
+  background-color: #f2f2f2; /* Very light gray */
+  color: #171717;
+}
+
+#skills {
+  background-color: #e6e6e6; /* Slightly darker gray */
+  color: #171717;
+}
+
+#projects {
+  background-color: #f8f9fa; /* Soft light gray */
+  color: #171717;
+}
+
+#contact {
+  background-color: #ffffff; /* White */
+  color: #171717;
+}
+
+/* Hover effect: Darkens sections slightly */
+section:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  background-color: #ddd; /* Light gray transition */
+}
+
+/* Buttons */
+button, a {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover, a:hover {
+  background-color: #444; /* Dark gray for hover */
+  color: white;
+}
+
+nav {
+  background-color: #171717; /* Dark Gray Background */
+  color: white; /* Light text */
+  padding: 15px 0;
+  transition: background-color 0.3s ease-in-out;
+}
+
+nav a {
+  color: white; /* Light Text */
+  padding: 10px 15px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: #f8f9fa; /* Light Gray Hover */
 }
